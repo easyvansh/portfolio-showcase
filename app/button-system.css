@@ -1,0 +1,42 @@
+/* Aceternity-inspired button system: hover-border gradient, shimmer, lift and strict contrast. */
+:where(.v2,.mysa-site,.noir-site,.nd-site) button{font:inherit}
+:where(.v2,.mysa-site,.noir-site,.nd-site) button:disabled{opacity:.45;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+
+/* Portfolio */
+.v2 .pill,.v2-nav>button,.menu-top button,.contact-v2 a,.footer-v2 a{position:relative;isolation:isolate;overflow:hidden;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,background .22s,color .22s,border-color .22s}
+.v2 .pill{min-height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px!important;padding:0 22px!important;font-weight:700}
+.v2 .pill.primary{background:#d9ff3f!important;color:#0c0d0b!important;border:1px solid #d9ff3f!important;box-shadow:0 9px 28px rgba(217,255,63,.18)}
+.v2 .pill.ghost{background:rgba(255,255,255,.04)!important;color:#f1efe6!important;border:1px solid rgba(255,255,255,.34)!important;backdrop-filter:blur(10px)}
+.v2 .pill:before,.mysa-button.terracotta:before,.noir-book:before,.noir-primary:before,.nd-primary:before{content:"";position:absolute;inset:-2px;border-radius:inherit;padding:2px;background:linear-gradient(105deg,transparent 18%,rgba(255,255,255,.8) 42%,transparent 65%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transform:translateX(-120%);transition:transform .65s;pointer-events:none}
+.v2 .pill:hover:before,.mysa-button.terracotta:hover:before,.noir-book:hover:before,.noir-primary:hover:before,.nd-primary:hover:before{transform:translateX(120%)}
+.v2 .pill:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.2)}
+.v2 .pill:active{transform:translateY(0) scale(.98)}
+.v2-nav>button{color:#f1efe6!important}.menu-top button{color:#0c0d0b!important}.contact-v2 a,.footer-v2 a{color:#eee!important}
+
+/* Shared primary geometry */
+.mysa-button,.noir-book,.noir-primary,.nd-primary,.nd-emergency-button{min-height:46px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px!important;font-weight:700;line-height:1;white-space:nowrap;text-align:center;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,filter .22s,background .22s,color .22s!important}
+.mysa-button:hover,.noir-book:hover,.noir-primary:hover,.nd-primary:hover,.nd-emergency-button:hover{transform:translateY(-2px)!important;filter:saturate(1.05)}
+.mysa-button:active,.noir-book:active,.noir-primary:active,.nd-primary:active,.nd-emergency-button:active{transform:translateY(0) scale(.98)!important}
+
+/* Mysa contrast */
+.mysa-button.terracotta{background:#c96a3d!important;color:#fff!important;border-color:#c96a3d!important;box-shadow:0 10px 28px rgba(201,106,61,.24)!important}
+.mysa-site .mysa-button:not(.terracotta){background:transparent;color:#171713;border-color:rgba(23,23,19,.55)}
+.mysa-site .experience .mysa-button,.mysa-site .private-event .mysa-button,.mysa-mobile-menu .mysa-button{color:#fff!important;border-color:rgba(255,255,255,.65)!important}
+.mysa-site .text-link{color:inherit!important}.mysa-site .dialog-close{background:#171713!important;color:#fff!important}.mysa-site .category-tabs button,.mysa-site .booking-choices button,.mysa-site .coffee-tabs button{color:#171713}.mysa-site .category-tabs button.active,.mysa-site .booking-choices button.active,.mysa-site .coffee-tabs button.active{background:#171713!important;color:#fff!important}
+
+/* Noir contrast */
+.noir-book{background:#f5f1ea!important;color:#111!important;border-color:#f5f1ea!important;box-shadow:0 10px 28px rgba(0,0,0,.2)}
+.noir-primary{background:#111!important;color:#fff!important;border-color:#111!important;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.noir-hero-content button{background:#f5f1ea!important;color:#111!important;border-color:#f5f1ea!important}.noir-hero-content a{background:rgba(17,17,17,.2)!important;color:#fff!important;border-color:rgba(255,255,255,.65)!important;backdrop-filter:blur(10px)}
+.noir-tabs button{color:#f5f1ea!important}.noir-tabs button.active{background:#f5f1ea!important;color:#111!important}.noir-close{color:#111!important}.noir-booking-top button{color:#fff!important}.noir-booking-actions button:not(.noir-primary){color:#111!important;background:transparent!important}
+
+/* Northstar contrast */
+.nd-primary{background:#15332e!important;color:#fff!important;border-color:#15332e!important;box-shadow:0 10px 28px rgba(21,51,46,.2)}
+.nd-emergency-button{background:#8f3d36!important;color:#fff!important;border-color:#8f3d36!important;box-shadow:0 10px 28px rgba(143,61,54,.2)}
+.nd-site .nd-close{background:#15332e!important;color:#fff!important}.nd-site .nd-treatment-tools button,.nd-site .nd-choice button{color:#15332e}.nd-site .nd-treatment-tools button.active,.nd-site .nd-choice button.active{background:#15332e!important;color:#fff!important}.nd-site .nd-mobile-actions>*{color:#fff!important}.nd-site .nd-mobile-actions>*:last-child{color:#202321!important}
+
+/* Material-sized touch targets and focus treatment */
+:where(.v2,.mysa-site,.noir-site,.nd-site) button,:where(.v2,.mysa-site,.noir-site,.nd-site) a{touch-action:manipulation}
+:where(.v2,.mysa-site,.noir-site,.nd-site) button:focus-visible,:where(.v2,.mysa-site,.noir-site,.nd-site) a:focus-visible{outline:3px solid color-mix(in srgb,currentColor 30%,transparent);outline-offset:3px}
+@media(max-width:700px){.v2 .pill,.mysa-button,.noir-book,.noir-primary,.nd-primary,.nd-emergency-button{min-height:46px;max-width:100%;white-space:normal}.v2 .pill{width:100%}}
+@media(prefers-reduced-motion:reduce){.v2 .pill:before,.mysa-button:before,.noir-book:before,.noir-primary:before,.nd-primary:before{display:none}}

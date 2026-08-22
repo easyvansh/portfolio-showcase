@@ -1,0 +1,31 @@
+export type Treatment = {id:string;name:string;category:string;summary:string;description:string;price:number;duration:string;visits:string;recovery:string;reasons:string[];emergency?:boolean};
+export const treatments:Treatment[]=[
+ {id:"checkup",name:"Routine Checkup",category:"Preventive",summary:"Examination, imaging when indicated and a clear care plan.",description:"A complete dental examination focused on prevention and early understanding.",price:800,duration:"30–45 min",visits:"1",recovery:"None expected",reasons:["Routine prevention","New patient assessment","A concern you want checked"]},
+ {id:"cleaning",name:"Professional Cleaning",category:"Preventive",summary:"Plaque and tartar removal, polishing and gum assessment.",description:"Professional cleaning supports gum health and reaches areas brushing may miss.",price:1500,duration:"45–60 min",visits:"1",recovery:"Mild sensitivity is possible",reasons:["Tartar buildup","Bleeding gums","Routine preventive care"]},
+ {id:"filling",name:"Dental Filling",category:"General",summary:"Repair early decay or a small damaged area.",description:"A tooth-coloured restoration used after examination confirms suitability.",price:1800,duration:"30–60 min",visits:"1",recovery:"Usually same day",reasons:["Early decay","Small chip","Worn filling"]},
+ {id:"root-canal",name:"Root Canal Treatment",category:"Restorative",summary:"Treat infection or inflammation inside a tooth.",description:"Root canal treatment removes affected tissue, disinfects the tooth and seals it.",price:4000,duration:"60–90 min",visits:"1–2",recovery:"Most people resume normal activity the same day",reasons:["Persistent tooth pain","Sensitivity","Deep decay","Damaged tooth"],emergency:true},
+ {id:"crown",name:"Dental Crown",category:"Restorative",summary:"Protect and restore a weakened tooth.",description:"A custom restoration that covers a tooth after careful assessment and preparation.",price:6500,duration:"45–75 min",visits:"2",recovery:"Short adjustment period",reasons:["Weakened tooth","After root canal","Large restoration"]},
+ {id:"whitening",name:"Professional Whitening",category:"Cosmetic",summary:"Clinician-supervised treatment for tooth discolouration.",description:"A suitability-led whitening plan designed to improve brightness while remaining natural.",price:7500,duration:"60–90 min",visits:"1–2",recovery:"Temporary sensitivity is possible",reasons:["Discolouration","Staining","Smile refresh"]},
+ {id:"aligners",name:"Clear Aligners",category:"Orthodontics",summary:"A discreet approach to selected alignment concerns.",description:"A digitally planned series of removable aligners, offered after an orthodontic assessment.",price:65000,duration:"Consultation 45 min",visits:"Regular reviews",recovery:"Short adjustment with each set",reasons:["Crowding","Spacing","Alignment concerns"]},
+ {id:"implant",name:"Dental Implant",category:"Implants",summary:"A long-term option for replacing a missing tooth.",description:"Implant treatment follows consultation, imaging, placement, healing and final restoration.",price:25000,duration:"60–120 min",visits:"Multiple stages",recovery:"Varies by procedure",reasons:["Missing tooth","Unstable denture","Long-term replacement planning"]},
+ {id:"children",name:"Children’s Visit",category:"Children",summary:"Calm preventive care and parent guidance.",description:"Age-appropriate examinations that build familiarity and support prevention.",price:800,duration:"30–45 min",visits:"As advised",recovery:"None expected",reasons:["First dental visit","Cleaning","Cavity prevention","Dental concern"]},
+ {id:"emergency",name:"Emergency Examination",category:"Emergency",summary:"Prompt assessment for pain, swelling or dental injury.",description:"An urgent examination to understand the immediate concern and explain safe next steps.",price:1000,duration:"30–45 min",visits:"Depends on findings",recovery:"Depends on treatment",reasons:["Severe toothache","Broken tooth","Swelling","Dental injury"],emergency:true},
+];
+export const dentists=[
+ {id:"mehra",name:"Dr. Aarav Mehra",role:"General & Restorative Dentistry",qualifications:"BDS · MDS",interests:"Root canal treatment · Restorative care · Smile rehabilitation",languages:"English · Hindi",next:"Today · 5:30 PM",photo:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=85"},
+ {id:"sharma",name:"Dr. Naina Sharma",role:"Orthodontics & Clear Aligners",qualifications:"BDS · MDS Orthodontics",interests:"Clear aligners · Braces · Retention",languages:"English · Hindi",next:"Tomorrow · 9:30 AM",photo:"https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=85"},
+ {id:"kapoor",name:"Dr. Kabir Kapoor",role:"Implant & Family Dentistry",qualifications:"BDS · MDS",interests:"Implants · Preventive care · Children’s dentistry",languages:"English · Hindi · Punjabi",next:"Tomorrow · 11:15 AM",photo:"https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=85"},
+];
+export const gallery=[
+ "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1400&q=85",
+];
+export const aftercare={
+ "After a filling":["Follow the treating dentist’s instructions.","Avoid chewing until numbness has fully worn off.","Contact the clinic if discomfort is severe or worsening."],
+ "After an extraction":["Avoid disturbing the area for the first 24 hours.","Do not smoke or rinse vigorously.","Choose recommended soft foods and follow prescribed guidance."],
+ "After root canal treatment":["Take medicines only as directed.","Avoid biting hard foods with the treated tooth until restored.","Attend the recommended follow-up."],
+ "After whitening":["Temporary sensitivity can occur.","Follow the clinician’s food and drink guidance.","Contact the clinic if symptoms concern you."],
+};
