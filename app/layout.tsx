@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./demo-modern.css";
 import "./button-system.css";
+import "./mobile-hardening.css";
 const productionHost=process.env.VERCEL_PROJECT_PRODUCTION_URL||"portfolio-showcase.vercel.app";
 export const metadata:Metadata={
   metadataBase:new URL(`https://${productionHost}`),
