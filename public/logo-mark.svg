@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Vansh Studio monogram</title>
+  <desc id="desc">A bold black letter V on an acid-lime rounded square.</desc>
+  <rect x="1" y="1" width="62" height="62" rx="17" fill="#D4FF3F" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M11 13h12.2L32 39.6 40.8 13H53L38.1 51H25.9L11 13Z" fill="#0A0A0A"/>
+  <circle cx="50" cy="50" r="3" fill="#0A0A0A"/>
+</svg>

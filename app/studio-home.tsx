@@ -7,6 +7,10 @@ const whatsapp =
   "https://wa.me/918630094919?text=Hi%20Vansh%2C%20I%27d%20like%20to%20discuss%20a%20website.";
 const ease = [0.22, 1, 0.36, 1] as const;
 
+function Brand({ compact = false }: { compact?: boolean }) {
+  return <span className={`brand-lockup ${compact ? "compact" : ""}`}><img src="/logo-mark.svg" alt=""/><span>VANSH<sup>®</sup></span></span>;
+}
+
 const projects = [
   {
     n: "01",
@@ -95,7 +99,7 @@ export default function StudioHome() {
       <div className="v2-scroll-progress" style={{ width: `${progress}%` }} />
       <nav className={`v2-nav ${scrolled ? "is-scrolled" : ""}`}>
         <a className="v2-logo" href="#top">
-          VANSH®
+          <Brand />
         </a>
         <div className="v2-nav-meta">
           <span>Independent digital studio</span>
@@ -116,7 +120,7 @@ export default function StudioHome() {
             transition={{ duration: 0.65, ease }}
           >
             <div className="menu-top">
-              <b>VANSH®</b>
+              <b><Brand /></b>
               <button onClick={() => setMenu(false)}>Close ×</button>
             </div>
             <div className="menu-list">
@@ -149,6 +153,7 @@ export default function StudioHome() {
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-orbit" aria-hidden="true">
           <span>DESIGN · DEVELOP · LAUNCH ·</span>
+          <img className="hero-brand-mark" src="/logo-mark.svg" alt="" />
         </div>
         <div className="v2-kicker">
           <span>Design + development</span>
@@ -288,7 +293,7 @@ export default function StudioHome() {
       <AnimatePresence>{toast && <motion.div className="copy-toast" role="status" initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} exit={{opacity:0,y:8}}>Email copied ✓</motion.div>}</AnimatePresence>
 
       <footer className="footer-v2">
-        <b>VANSH®</b>
+        <b><Brand compact /></b>
         <p>Independent digital studio<br />Dehradun · India</p>
         <p>Concept projects are clearly marked.<br />© 2026 Vansh Studio</p>
         <a href="#top">Back to top ↑</a>

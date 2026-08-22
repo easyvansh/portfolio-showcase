@@ -124,3 +124,16 @@
 
 @media(max-width:800px){.v2-nav.is-scrolled{height:56px}.v2-menu-button>span{display:none}.v2 .compact-hero{min-height:680px}.v2 .compact-hero h1{font-size:clamp(2.5rem,13vw,5rem)}.availability-marquee{width:calc(100% + 40px);margin:-68px -20px 68px}.process-stack{padding-left:17px}.process-row:before{left:-19px}.process-stack:before{left:3px}.outcome-grid article:before{display:none}}
 @media(prefers-reduced-motion:reduce){.availability-marquee div{animation:none}.v2 .chapter-image>div{transform:none}.v2 .pill{transform:none}}
+
+/* Vansh Studio identity: new V monogram paired with the original wordmark. */
+.brand-lockup{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.brand-lockup>img{display:block;width:31px;height:31px;max-width:none}
+.brand-lockup>span{font-size:21px;font-weight:900;line-height:1;letter-spacing:-1.4px}
+.brand-lockup sup{font-size:7px;vertical-align:top;margin-left:2px;letter-spacing:0}
+.brand-lockup.compact>img{width:26px;height:26px}
+.brand-lockup.compact>span{font-size:18px}
+.menu-top .brand-lockup{color:var(--black)}
+.hero-brand-mark{position:absolute;z-index:2;left:50%;top:50%;width:74px;height:74px;max-width:none;transform:translate(-50%,-50%);animation:counter-orbit 18s linear infinite;filter:drop-shadow(0 12px 28px rgba(0,0,0,.32))}
+@keyframes counter-orbit{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@media(max-width:800px){.brand-lockup{gap:8px}.brand-lockup>img{width:27px;height:27px}.brand-lockup>span{font-size:19px}.hero-brand-mark{width:47px;height:47px}}
+@media(prefers-reduced-motion:reduce){.hero-brand-mark{animation:none}}
