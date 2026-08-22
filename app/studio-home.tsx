@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const whatsapp =
-  "https://wa.me/918630094919?text=Hi%20Vansh%2C%20I%27d%20like%20to%20discuss%20a%20website.";
+  "https://wa.me/17807081340?text=Hi%20Vansh%2C%20I%27d%20like%20to%20discuss%20a%20website.";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 function Brand({ compact = false }: { compact?: boolean }) {
@@ -285,7 +285,7 @@ export default function StudioHome() {
         </h2>
         <div>
           <a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a>
-          <a href="tel:+918630094919">Call ↗</a>
+          <a href="tel:+17807081340">Call ↗</a>
           <a href="mailto:vansh2@ualberta.ca" onClick={copyEmail}>Email ↗</a>
         </div>
       </section>

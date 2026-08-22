@@ -5,7 +5,7 @@ import {aftercare,dentists,gallery,treatments,Treatment} from "./dental-data";
 import "./dental.css";
 
 type Appointment={id:string;visit:string;dentist:string;date:string;time:string;name:string;phone:string;email:string;patient:string;reason:string;pain:string;notes:string;status:string};
-const clinicPhone="+918630094919", address="Rajpur Road, Dehradun, Uttarakhand";
+const clinicPhone="+17807081340", address="Rajpur Road, Dehradun, Uttarakhand";
 const hero="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=2200&q=90";
 
 function Modal({open,onClose,label,children,className=""}:{open:boolean;onClose:()=>void;label:string;children:React.ReactNode;className?:string}){useEffect(()=>{if(!open)return;const fn=(e:KeyboardEvent)=>e.key==="Escape"&&onClose();addEventListener("keydown",fn);document.body.style.overflow="hidden";return()=>{removeEventListener("keydown",fn);document.body.style.overflow=""}},[open,onClose]);return <AnimatePresence>{open&&<motion.div className="nd-backdrop" onMouseDown={e=>e.currentTarget===e.target&&onClose()} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}><motion.div role="dialog" aria-modal="true" aria-label={label} className={`nd-modal ${className}`} initial={{opacity:0,y:30,scale:.985}} animate={{opacity:1,y:0,scale:1}} exit={{opacity:0,y:20}}><button className="nd-close" onClick={onClose} aria-label="Close">×</button>{children}</motion.div></motion.div>}</AnimatePresence>}
