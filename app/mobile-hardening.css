@@ -1,14 +1,17 @@
 /* Mobile usability pass shared by the portfolio and all three demos. */
 html,body{max-width:100%;overflow-x:clip}
-:where(.v2,.mysa-site,.noir-site,.nd-site),:where(.v2,.mysa-site,.noir-site,.nd-site) *{min-inline-size:0}
-:where(.v2,.mysa-site,.noir-site,.nd-site) img,:where(.v2,.mysa-site,.noir-site,.nd-site) video{max-inline-size:100%;height:auto}
-:where(.v2,.mysa-site,.noir-site,.nd-site) input,:where(.v2,.mysa-site,.noir-site,.nd-site) select,:where(.v2,.mysa-site,.noir-site,.nd-site) textarea{max-width:100%;font-size:16px}
+.mysa-site,.noir-site,.nd-site,.rh-site{overflow-x:clip;overflow-y:visible}
+:where(.mysa-site,.noir-site,.nd-site,.rh-site) :focus-visible{outline:3px solid currentColor;outline-offset:3px}
+:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site),:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) *{min-inline-size:0}
+:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) img,:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) video{max-inline-size:100%;height:auto}
+:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) input,:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) select,:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) textarea{max-width:100%;font-size:16px}
+:where(.mysa-site,.noir-site,.nd-site,.rh-site) h1,:where(.mysa-site,.noir-site,.nd-site,.rh-site) h2,:where(.mysa-site,.noir-site,.nd-site,.rh-site) h3{max-width:100%;text-wrap:balance}
 
 @media(max-width:700px){
-  :where(.v2,.mysa-site,.noir-site,.nd-site){width:100%;max-width:100%;overflow-x:clip}
-  :where(.v2,.mysa-site,.noir-site,.nd-site) button,:where(.v2,.mysa-site,.noir-site,.nd-site) a{overflow-wrap:normal;word-break:normal}
-  :where(.v2,.mysa-site,.noir-site,.nd-site) button{max-width:100%;min-height:44px}
-  :where(.v2,.mysa-site,.noir-site,.nd-site) [role="dialog"]{width:100%;max-width:100%;max-height:calc(100dvh - 8px)}
+  :where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site){width:100%;max-width:100%;overflow-x:clip}
+  :where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) button,:where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) a{overflow-wrap:normal;word-break:normal}
+  :where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) button{max-width:100%;min-height:44px}
+  :where(.v2,.mysa-site,.noir-site,.nd-site,.rh-site) [role="dialog"]{width:100%;max-width:100%;max-height:calc(100dvh - 8px)}
   :where(.category-tabs,.coffee-tabs,.noir-tabs,.nd-treatment-tools>div,.nd-education,.nd-compare,.nd-implant>div,.mysa-info,.nd-quick,.nd-trust){scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
   :where(.category-tabs,.coffee-tabs,.noir-tabs,.nd-treatment-tools>div,.nd-education,.nd-compare,.nd-implant>div,.mysa-info,.nd-quick,.nd-trust)::-webkit-scrollbar{display:none}
 
@@ -70,8 +73,13 @@ html,body{max-width:100%;overflow-x:clip}
   .nd-steps-list{grid-template-columns:1fr!important}.nd-payment{display:grid!important;grid-template-columns:1fr 1fr;padding:24px 18px!important}.nd-payment h3{grid-column:1/-1;min-width:0!important}.nd-payment span{text-align:center}
   .nd-estimator,.nd-form-demo{padding:28px 18px!important}.nd-aftercare-box>div{padding:30px 18px!important}.nd-education article{min-width:min(82vw,310px)!important}
   .nd-documents h2{font-size:43px!important}.nd-visit-main>div:first-child>div{display:grid!important;grid-template-columns:1fr 1fr;gap:9px!important}.nd-visit-main>div:first-child>div>*{width:100%;text-align:center;justify-content:center}.nd-map{display:grid!important;grid-template-columns:auto 1fr}.nd-map strong{grid-column:1/-1;text-align:center}
-  .nd-footer{grid-template-columns:1fr!important;padding:54px 18px 92px!important}.nd-mobile-actions{height:58px!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;padding-bottom:env(safe-area-inset-bottom)}.nd-mobile-actions>*{min-width:0;padding:0 4px;font-size:9px!important}
+  .nd-footer{grid-template-columns:1fr!important;padding:54px 18px 92px!important}.nd-mobile-actions{height:58px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;padding-bottom:env(safe-area-inset-bottom)}.nd-mobile-actions>*{min-width:0;padding:0 4px;font-size:9px!important}
   .nd-backdrop{padding:8px 0 0!important;align-items:end!important}.nd-modal{width:100%!important;padding:44px 16px 20px!important;max-height:calc(100dvh - 8px)!important}.nd-treatment-modal h2,.nd-emergency-modal h2,.nd-book-head h2{font-size:37px!important}.nd-choice>div,.nd-patient-fields,.nd-form-modal form,.nd-detail-stats,.nd-confirm>div{grid-template-columns:1fr!important}.nd-book-step{min-height:0!important;padding:26px 0}.nd-book-controls{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important}.nd-book-controls button{width:100%;padding-inline:8px!important}.nd-emergency-actions{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important}.nd-emergency-actions>*{width:100%;text-align:center}.nd-emergency-slot{grid-template-columns:1fr auto!important}.nd-emergency-slot i{grid-column:1/-1}.nd-inline-waitlist{grid-template-columns:1fr!important}
+
+  /* Shared fixed-action and long-content safety */
+  :where(.mobile-actions,.nd-mobile-actions,.rh-mobile-actions,.noir-mobile-book){bottom:max(0px,env(safe-area-inset-bottom))}
+  :where(.mysa-site,.noir-site,.nd-site,.rh-site) :where(h1,h2,h3,p,address,button,a){max-inline-size:100%}
+  :where(.mysa-dialog,.noir-detail,.noir-booking-panel,.nd-modal,.rh-sheet){overscroll-behavior:contain}
 }
 
 @media(max-width:380px){

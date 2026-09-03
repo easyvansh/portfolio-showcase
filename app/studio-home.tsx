@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const whatsapp =
   "https://wa.me/17807081340?text=Hi%20Vansh%2C%20I%27d%20like%20to%20discuss%20a%20website.";
+const callPhone = "+918630094919";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 function Brand({ compact = false }: { compact?: boolean }) {
@@ -14,6 +15,16 @@ function Brand({ compact = false }: { compact?: boolean }) {
 const projects = [
   {
     n: "01",
+    name: "Rhythm House",
+    type: "Dance & fitness",
+    line: "A clear, energetic studio website built to turn local interest into trial bookings.",
+    href: "/rhythm-house",
+    image:
+      "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=2200&q=88",
+    tone: "chapter-rhythm",
+  },
+  {
+    n: "02",
     name: "Mysa Café",
     type: "Hospitality",
     line: "A warm, editorial café experience built around discovery and reservations.",
@@ -23,7 +34,7 @@ const projects = [
     tone: "chapter-mysa",
   },
   {
-    n: "02",
+    n: "03",
     name: "NOIR Studio",
     type: "Beauty & grooming",
     line: "A premium service and booking experience with a sharp point of view.",
@@ -33,7 +44,7 @@ const projects = [
     tone: "chapter-noir",
   },
   {
-    n: "03",
+    n: "04",
     name: "Northstar Dental",
     type: "Healthcare",
     line: "A calm, clear clinic experience with guided treatment discovery and appointment booking.",
@@ -128,7 +139,8 @@ export default function StudioHome() {
                 ["01", "Work", "#work"],
                 ["02", "Services", "#services"],
                 ["03", "Process", "#process"],
-                ["04", "Contact", "#contact"],
+                ["04", "About", "#about"],
+                ["05", "Contact", "#contact"],
               ].map(([n, title, href], i) => (
                 <motion.a
                   key={title}
@@ -192,11 +204,11 @@ export default function StudioHome() {
       <section className="chapters" id="work">
         <div className="v2-section-head">
           <span>01 / Selected work</span>
-          <p>Three concepts. Three different business problems.</p>
+          <p>Four concepts. Four different customer journeys.</p>
         </div>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <Reveal
-            className={`project-chapter ${project.tone}`}
+            className={`project-chapter ${project.tone} ${index % 2 === 0 ? "chapter-dark" : "chapter-light"}`}
             key={project.name}
           >
             <a href={project.href}>
@@ -227,7 +239,7 @@ export default function StudioHome() {
 
       <section className="outcomes" id="services">
         <div className="v2-section-head inverse">
-          <span>02 / Services</span>
+          <span>03 / Services</span>
           <p>Only what your business actually needs.</p>
         </div>
         <Reveal>
@@ -259,7 +271,7 @@ export default function StudioHome() {
 
       <section className="process-v2" id="process">
         <div className="v2-section-head">
-          <span>03 / Process</span>
+          <span>04 / Process</span>
           <p>One direct point of contact from start to finish.</p>
         </div>
         <div className="process-stack">
@@ -277,6 +289,19 @@ export default function StudioHome() {
         </div>
       </section>
 
+      <section className="about-vansh" id="about">
+        <div className="about-stamp" aria-hidden="true"><span>23</span><small>DEHRADUN<br/>DEVELOPER</small></div>
+        <Reveal className="about-vansh-copy">
+          <span>05 / A little about me</span>
+          <h2>Hi, I’m Vansh.</h2>
+          <p>I’m a 23-year-old developer helping small businesses show up online with more clarity, personality and confidence. I like turning the way a business already works into a website that feels easy to explore—and even easier to contact.</p>
+          <div>
+            <a href="https://easyvansh.vercel.app" target="_blank" rel="noreferrer">Developer portfolio ↗</a>
+            <a href="https://thefifthwall.vercel.app" target="_blank" rel="noreferrer">The Fifth Wall ↗</a>
+          </div>
+        </Reveal>
+      </section>
+
       <section className="contact-v2" id="contact">
         <div className="availability-marquee" aria-label="Available for projects"><div>AVAILABLE FOR PROJECTS — LET&apos;S TALK — AVAILABLE FOR PROJECTS — LET&apos;S TALK — </div><div aria-hidden="true">AVAILABLE FOR PROJECTS — LET&apos;S TALK — AVAILABLE FOR PROJECTS — LET&apos;S TALK — </div></div>
         <span>Have a project in mind?</span>
@@ -285,7 +310,7 @@ export default function StudioHome() {
         </h2>
         <div>
           <a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a>
-          <a href="tel:+17807081340">Call ↗</a>
+          <a href={`tel:${callPhone}`}>Call me ↗</a>
           <a href="mailto:vansh2@ualberta.ca" onClick={copyEmail}>Email ↗</a>
         </div>
       </section>

@@ -1,7 +1,7 @@
 "use client";
 import {motion} from "motion/react";
 import {useMemo,useState} from "react";
-const wa="https://wa.me/17807081340";
+const wa="https://wa.me/?text=Hi%2C%20I%27d%20like%20to%20make%20an%20enquiry.";
 const Back=()=> <a className="biz-back" href="/">← Concept by Vansh Studio</a>;
 const Reveal=({children}:{children:React.ReactNode})=><motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:.6}}>{children}</motion.div>;
 

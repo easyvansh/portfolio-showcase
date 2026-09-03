@@ -29,7 +29,7 @@
 .v2 .compact-hero h1{font-size:clamp(58px,8.2vw,126px);margin:auto 0 6vh}
 .v2 .chapters{padding-block:72px 88px}
 .v2 .chapters>.v2-section-head{margin-bottom:34px}
-.v2 .chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.v2 .chapters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .v2 .chapters>.v2-section-head{grid-column:1/-1}
 .v2 .project-chapter{min-width:0;margin:0;background:transparent;color:var(--black);padding:0}
 .v2 .project-chapter>a{display:flex;height:100%;min-width:0;flex-direction:column;padding:10px;border:1px solid rgba(12,13,11,.15);border-radius:22px;background:rgba(255,255,255,.42);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
@@ -41,6 +41,8 @@
 .v2 .chapter-copy{order:3;display:block;padding:18px 7px 10px}
 .v2 .chapter-copy h2{font-size:clamp(31px,3.1vw,50px);line-height:.92;letter-spacing:-.055em;margin:0 0 16px}
 .v2 .chapter-copy h3{font-size:clamp(18px,1.55vw,25px);line-height:1.12;letter-spacing:-.025em}
+.v2 .project-chapter.chapter-dark>a{background:#121310;color:#f5f1e8;border-color:#30322c}.v2 .project-chapter.chapter-dark .chapter-meta span:first-child{color:var(--lime)}
+.v2 .project-chapter.chapter-light>a{background:#f7f4ec;color:var(--black);border-color:rgba(12,13,11,.15)}
 .v2 .outcomes,.v2 .process-v2,.v2 .contact-v2{padding-block:82px}
 .v2 .outcomes h2{margin:70px 0}
 .v2 .outcome-grid article{min-height:330px}
@@ -137,3 +139,9 @@
 @keyframes counter-orbit{to{transform:translate(-50%,-50%) rotate(-360deg)}}
 @media(max-width:800px){.brand-lockup{gap:8px}.brand-lockup>img{width:27px;height:27px}.brand-lockup>span{font-size:19px}.hero-brand-mark{width:47px;height:47px}}
 @media(prefers-reduced-motion:reduce){.hero-brand-mark{animation:none}}
+
+/* Dance-studio case study and personal founder note. */
+.dance-case-study{padding:100px 3.2vw;background:#d4ff3f}.dance-case-study .v2-section-head{margin-bottom:75px}.dance-case-copy{display:grid;grid-template-columns:1.25fr 1fr;gap:9vw}.dance-case-copy>div:first-child>span,.about-vansh-copy>span{font-size:10px;text-transform:uppercase;letter-spacing:.13em}.dance-case-copy h2{font-size:clamp(52px,6.7vw,102px);line-height:.87;letter-spacing:-.065em;margin:45px 0 30px}.dance-case-copy h2 em{font-family:Georgia,serif;font-weight:400}.dance-case-copy p{max-width:670px;font-size:17px;line-height:1.62;margin-bottom:34px}.dance-case-copy .pill{background:#0a0a0a;color:#fff;border-color:#0a0a0a}.dance-journey{border-top:1px solid rgba(0,0,0,.28)}.dance-journey>div{display:grid;grid-template-columns:40px 1fr auto;align-items:center;border-bottom:1px solid rgba(0,0,0,.28);min-height:95px}.dance-journey span{font-size:9px}.dance-journey strong{font-size:20px;font-weight:500}.dance-journey i{font-style:normal;font-size:20px}.about-vansh{padding:105px 3.2vw;background:#ddd8ca;display:grid;grid-template-columns:25% 1fr;gap:9vw}.about-stamp{width:180px;height:180px;border:1px solid rgba(0,0,0,.3);border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(-7deg)}.about-stamp span{font-family:Georgia,serif;font-size:70px;line-height:.7}.about-stamp small{font-size:8px;letter-spacing:.15em}.about-vansh-copy h2{font-size:clamp(55px,7vw,105px);letter-spacing:-.07em;line-height:.85;margin:50px 0 32px}.about-vansh-copy>p{max-width:810px;font-family:Georgia,serif;font-size:clamp(24px,2.6vw,40px);line-height:1.22}.about-vansh-copy>div{display:flex;gap:9px;flex-wrap:wrap;margin-top:40px}.about-vansh-copy a{border:1px solid #77786f;border-radius:999px;padding:13px 17px;text-transform:uppercase;font-size:9px;letter-spacing:.1em}
+
+@media(max-width:1100px) and (min-width:801px){.v2 .chapters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.v2 .chapters{grid-template-columns:1fr}.dance-case-study{padding:72px 18px}.dance-case-study .v2-section-head{margin-bottom:48px}.dance-case-copy{grid-template-columns:1fr;gap:65px}.dance-case-copy h2{font-size:14vw}.dance-case-copy p{font-size:16px}.dance-journey strong{font-size:17px}.about-vansh{padding:72px 18px;grid-template-columns:1fr;gap:50px}.about-stamp{width:125px;height:125px}.about-stamp span{font-size:50px}.about-vansh-copy h2{font-size:16vw;margin:38px 0 25px}.about-vansh-copy>p{font-size:24px}.about-vansh-copy>div{display:grid}.about-vansh-copy a{text-align:center}.footer-v2{padding-bottom:90px}}
